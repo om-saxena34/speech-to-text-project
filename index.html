@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoiceAI Transcriber</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <!-- Animated background -->
+  <div class="bg-scene">
+    <div class="bg-grid"></div>
+    <div class="bg-orb"></div>
+    <div class="bg-orb"></div>
+    <div class="bg-orb"></div>
+  </div>
+
+  <div class="container">
+
+    <!-- Header -->
+    <div class="header">
+      <div class="logo-wrap">
+        <div class="logo-icon">🎙</div>
+        <h1 class="logo">Voice<span>AI</span></h1>
+      </div>
+      <p class="subtitle">Neural Speech Recognition Engine</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Input Zone -->
+    <div class="input-zone">
+      <input type="text" placeholder="Drop an audio file or hit record..." disabled>
+      <button class="icon-btn" id="uploadBtn" title="Upload file">📁</button>
+      <button class="icon-btn" id="micBtn" title="Record audio">🎤</button>
+      <input type="file" id="fileInput" accept="audio/*">
+    </div>
+
+    <!-- Recording timer -->
+    <div class="timer-badge" id="timerBadge">
+      <div class="timer-dot"></div>
+      <span id="timerText">Recording… 0s / 5s</span>
+    </div>
+
+    <!-- Waveform bars -->
+    <div class="waveform-container" id="waveform">
+      <div class="wave-bar" style="height:8px"></div>
+      <div class="wave-bar" style="height:16px"></div>
+      <div class="wave-bar" style="height:24px"></div>
+      <div class="wave-bar" style="height:12px"></div>
+      <div class="wave-bar" style="height:28px"></div>
+      <div class="wave-bar" style="height:20px"></div>
+      <div class="wave-bar" style="height:10px"></div>
+      <div class="wave-bar" style="height:32px"></div>
+      <div class="wave-bar" style="height:18px"></div>
+      <div class="wave-bar" style="height:26px"></div>
+      <div class="wave-bar" style="height:14px"></div>
+      <div class="wave-bar" style="height:22px"></div>
+      <div class="wave-bar" style="height:30px"></div>
+      <div class="wave-bar" style="height:8px"></div>
+      <div class="wave-bar" style="height:16px"></div>
+      <div class="wave-bar" style="height:24px"></div>
+      <div class="wave-bar" style="height:12px"></div>
+      <div class="wave-bar" style="height:28px"></div>
+      <div class="wave-bar" style="height:20px"></div>
+      <div class="wave-bar" style="height:10px"></div>
+      <div class="wave-bar" style="height:32px"></div>
+      <div class="wave-bar" style="height:18px"></div>
+      <div class="wave-bar" style="height:26px"></div>
+      <div class="wave-bar" style="height:14px"></div>
+    </div>
+
+    <!-- Transcribe CTA -->
+    <div class="transcribe-wrap">
+      <button id="transcribeBtn">⚡ Transcribe Audio</button>
+    </div>
+
+    <!-- Loader -->
+    <div id="loader">
+      <div class="loader-inner">
+        <div class="spinner-ring"></div>
+        <p class="loader-text">Analyzing waveform…</p>
+      </div>
+    </div>
+
+    <!-- Result -->
+    <div class="result-card" id="resultCard">
+      <div class="result-header">
+        <div class="result-label">
+          <div class="result-dot"></div>
+          Transcription Output
+        </div>
+        <button id="copyBtn">⎘ Copy</button>
+      </div>
+      <p id="output"></p>
+    </div>
+
+    <!-- Status bar -->
+    <div class="status-bar">
+      <div class="status-item">
+        <div class="status-led"></div>
+        <span>Whisper Base Model</span>
+      </div>
+      <div class="status-item">
+        <span id="statusMsg">Ready</span>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
