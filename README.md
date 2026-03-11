@@ -50,26 +50,6 @@ https://your-render-app-link.onrender.com
 
 ---
 
-## 📂 Project Structure
-
-```
-speech-to-text-ai
-│
-├── app.py
-├── requirements.txt
-│
-├── templates
-│   └── index.html
-│
-├── static
-│   ├── style.css
-│   └── script.js
-│
-└── uploads
-```
-
----
-
 ## ▶️ Run the Application
 
 Start the Flask server:
