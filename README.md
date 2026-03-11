@@ -6,17 +6,6 @@ This application allows users to **upload audio files or record audio using a mi
 
 ---
 
-## 🚀 Live Demo
-
-You can access the deployed application here:
-
-🔗 **Render Deployment:**
-https://your-render-app-link.onrender.com
-
-*(Replace the above link with your actual Render deployment URL.)*
-
----
-
 ## 🚀 Features
 
 * 🎤 Live microphone recording
