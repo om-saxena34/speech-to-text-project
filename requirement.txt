@@ -4,3 +4,4 @@ transformers
 torch
 ffmpeg-python
 numpy
+gunicorn
